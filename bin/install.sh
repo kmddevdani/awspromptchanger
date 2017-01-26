@@ -12,7 +12,7 @@
 # download the prompt changing script to the right location, preferably via git
 # sudo curl -o /usr/local/bin/changeCommandPrompt.sh https://raw.githubusercontent.com/kmddevdani/awspromptchanger/master/bin/changeCommandPrompt.sh
 mkdir ~/bin
-curl https://raw.githubusercontent.com/kmddevdani/awspromptchanger/master/bin/changeCommandPrompt.sh > ~/bin/changeCommandPrompt.sh
+curl -H 'Cache-Control: no-cache' https://raw.githubusercontent.com/kmddevdani/awspromptchanger/master/bin/changeCommandPrompt.sh > ~/bin/changeCommandPrompt.sh
 chmod +x ~/bin/changeCommandPrompt.sh
 
 # execute the prompt changing script
