@@ -11,6 +11,7 @@
 
 # download the prompt changing script to the right location, preferably via git
 sudo curl -o /usr/local/bin/changeCommandPrompt.sh https://raw.githubusercontent.com/kmddevdani/awspromptchanger/master/bin/changeCommandPrompt.sh
+sudo chmod +x /usr/local/bin/installChangeCommandPrompt.sh
 
 # execute the prompt changing script
 sudo /usr/local/bin/changeCommandPrompt.sh
