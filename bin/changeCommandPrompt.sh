@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # This script changes the bash prompt of the aws instance it is running on.
-# Prerequirement: Machine must have access to its tag names!
+# Prerequirement: Machine must have access to its tag names! Root access (sudo) needed.
 # 
 # @author Kathmandu Dev Team
 # @created 20170127
@@ -29,4 +29,5 @@ if [ "$1" = "debug" ]; then
 fi
 
 # Step 4: replace the line in /etc/bashrc which defines the command prompt
-sudo sed -i '/@\\h /c\  [ "$PS1" = "\\\\s-\\\\v\\\\\\$ " ] && PS1="[\\u@$NICKNAME \\W]\\\\$ "' /etc/bashrc
+#sudo sed -i '/@\\h /c\  [ "$PS1" = "\\\\s-\\\\v\\\\\\$ " ] && PS1="[\\u@$NICKNAME \\W]\\\\$ "' /etc/bashrc
+sudo sed -i '/[ "$PS1" = /c\  [ "$PS1" = "\\\\s-\\\\v\\\\\\$ " ] && PS1="[\\u@$NICKNAMEX \\W]\\\\$ "' /etc/bashrc
