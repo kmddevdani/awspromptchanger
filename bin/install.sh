@@ -10,11 +10,13 @@
 # for now, installation location ist statically set to /usr/local/bin
 
 # download the prompt changing script to the right location, preferably via git
-sudo curl -o /usr/local/bin/changeCommandPrompt.sh https://raw.githubusercontent.com/kmddevdani/awspromptchanger/master/bin/changeCommandPrompt.sh
-sudo chmod +x /usr/local/bin/changeCommandPrompt.sh
+# sudo curl -o /usr/local/bin/changeCommandPrompt.sh https://raw.githubusercontent.com/kmddevdani/awspromptchanger/master/bin/changeCommandPrompt.sh
+mkdir ~/bin
+curl https://raw.githubusercontent.com/kmddevdani/awspromptchanger/master/bin/changeCommandPrompt.sh > ~/bin/changeCommandPrompt.sh
+chmod +x ~/bin/changeCommandPrompt.sh
 
 # execute the prompt changing script
-sudo /usr/local/bin/changeCommandPrompt.sh
+sudo ~/bin/changeCommandPrompt.sh
 
 # install as cron job
 # omitted for now
