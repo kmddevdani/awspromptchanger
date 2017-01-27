@@ -10,7 +10,7 @@ CHANGECOMMANDPROMPTVERSION="2"
 
 # check if new install script version is available
 echo "Checking for new version of the installer on the server..."
-COMMANDPROMPTVERSIONONSERVER=$(curl https://raw.githubusercontent.com/kmddevdani/awspromptchanger/master/version)
+COMMANDPROMPTVERSIONONSERVER=$(curl -s https://raw.githubusercontent.com/kmddevdani/awspromptchanger/master/version)
 
 echo "Version on server: $COMMANDPROMPTVERSIONONSERVER. Local version: $CHANGECOMMANDPROMPTVERSION."
 if [ "$CHANGECOMMANDPROMPTVERSION" == "$COMMANDPROMPTVERSIONONSERVER" ] 
@@ -28,7 +28,7 @@ fi
 # download the prompt changing script to the right location, preferably via git
 # sudo curl -o /usr/local/bin/changeCommandPrompt.sh https://raw.githubusercontent.com/kmddevdani/awspromptchanger/master/bin/changeCommandPrompt.sh
 mkdir ~/bin
-curl -H 'Cache-Control: no-cache' https://raw.githubusercontent.com/kmddevdani/awspromptchanger/master/bin/changeCommandPrompt.sh > ~/bin/changeCommandPrompt.sh
+curl -s -H 'Cache-Control: no-cache' https://raw.githubusercontent.com/kmddevdani/awspromptchanger/master/bin/changeCommandPrompt.sh > ~/bin/changeCommandPrompt.sh
 chmod +x ~/bin/changeCommandPrompt.sh
 
 # execute the prompt changing script
