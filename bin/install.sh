@@ -4,7 +4,9 @@
 # what it does:
 # requirements:
 #
-CHANGECOMMANDPROMPTVERSION="1"
+
+# current version number of this install script
+CHANGECOMMANDPROMPTVERSION="2"
 
 # check if new install script version is available
 echo "Checking for new version of the installer on the server..."
@@ -15,7 +17,9 @@ if [ "$CHANGECOMMANDPROMPTVERSION" == "$COMMANDPROMPTVERSIONONSERVER" ]
 then
 	echo "This script is up to date."
 else
-	echo "The server contains a new version of this script. Please update."
+	echo "The server contains a new version of this script. Trying to update."
+	curl -H 'Cache-Control: no-cache' https://raw.githubusercontent.com/kmddevdani/awspromptchanger/master/bin/install.sh > installChangeCommandPrompt.sh 
+	chmod +x installChangeCommandPrompt.sh
 fi
 
 # determine installation location, eventually create folder
