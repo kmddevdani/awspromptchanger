@@ -11,11 +11,11 @@ echo "Checking for new version of the installer on the server..."
 COMMANDPROMPTVERSIONONSERVER=$(curl https://raw.githubusercontent.com/kmddevdani/awspromptchanger/master/version)
 
 echo "Version on server: $COMMANDPROMPTVERSIONONSERVER. Local version: $CHANGECOMMANDPROMPTVERSION."
-if [ "$CHANGECOMMANDPROMPTVERSION" != "$CHANGECOMMANDPROMPTVERSION" ] 
+if [ "$CHANGECOMMANDPROMPTVERSION" == "$COMMANDPROMPTVERSIONONSERVER" ] 
 then
-	echo "The server contains a new version of this script. Please update."
-else
 	echo "This script is up to date."
+else
+	echo "The server contains a new version of this script. Please update."
 fi
 
 # determine installation location, eventually create folder
