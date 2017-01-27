@@ -4,6 +4,12 @@
 # what it does:
 # requirements:
 #
+CHANGECOMMANDPROMPTVERSION="1"
+
+# check if new install script version is available
+COMMANDPROMPTVERSIONONSERVER=$(curl https://raw.githubusercontent.com/kmddevdani/awspromptchanger/master/version)
+
+echo "Version on server: $COMMANDPROMPTVERSIONONSERVER. Local version: $CHANGECOMMANDPROMPTVERSION."
 
 
 # determine installation location, eventually create folder
