@@ -10,7 +10,9 @@ CHANGECOMMANDPROMPTVERSION="1"
 COMMANDPROMPTVERSIONONSERVER=$(curl https://raw.githubusercontent.com/kmddevdani/awspromptchanger/master/version)
 
 echo "Version on server: $COMMANDPROMPTVERSIONONSERVER. Local version: $CHANGECOMMANDPROMPTVERSION."
-
+if [ "$CHANGECOMMANDPROMPTVERSION" != "$CHANGECOMMANDPROMPTVERSION" ] then
+	echo "The server contains a new version of this script. Please update."
+fi
 
 # determine installation location, eventually create folder
 # for now, installation location ist statically set to /usr/local/bin
