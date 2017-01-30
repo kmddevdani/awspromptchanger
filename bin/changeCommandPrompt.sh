@@ -30,4 +30,4 @@ if [ "$1" = "debug" ]; then
 fi
 
 # Step 4: replace the line in /etc/bashrc which defines the command prompt
-sudo sed -i '/\[ "$PS1" = /c\  [ "$PS1" = "\\\\s-\\\\v\\\\\\$ " ] && PS1="[\\u@$NICKNAME \\W]\\\\$ "' /etc/bashrc
+sudo sed -i '/\[ "$PS1" = /c\  [ "$PS1" = "\\\\s-\\\\v\\\\\\$ " ] && PS1="[\\u@'"$NICKNAME"' \\W]\\\\$ "' /etc/bashrc

@@ -6,7 +6,7 @@
 #
 
 # current version number of this install script
-CHANGECOMMANDPROMPTVERSION="3"
+CHANGECOMMANDPROMPTVERSION="4"
 
 # check if new install script version is available
 echo "Checking for new version of the installer on the server..."
